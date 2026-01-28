@@ -34,3 +34,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Kontaktformular
+
+Das Kontaktformular nutzt **Next.js Server Actions** für die sichere Verarbeitung von Formulardaten:
+
+1. **Client-Komponente** (`Contact.tsx`):
+   - Verwendet `useActionState` Hook für Formular-Status
+   - Zeigt Toast-Benachrichtigungen für Erfolg/Fehler
+   - Sendet Formulardaten an die Server Action
+
+2. **Server Action** (`server/contact.ts`):
+   - Validiert die Eingaben (Name ≥ 2 Zeichen, gültige E-Mail, Nachricht 10-500 Zeichen)
+   - Sendet Daten per POST an externe API (`NEXT_FORM_URL`)
+   - Gibt Erfolgs- oder Fehlermeldung zurück
+
+Die Server Action läuft vollständig auf dem Server - keine sensiblen Daten im Client-Code.

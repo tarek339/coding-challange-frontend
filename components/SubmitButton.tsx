@@ -11,7 +11,7 @@ const SubmitButton = ({ ...props }: React.ComponentProps<typeof Button>) => {
     <Button
       disabled={pending}
       type="submit"
-      className="cursor-pointer text-white px-10 w-36 py-5 text-md font-bold rounded-md hover:bg-primary"
+      className="cursor-pointer text-white px-10 w-full sm:w-36 py-5 text-md font-bold rounded-md hover:bg-primary"
     >
       {pending ? <LoaderCircle className="animate-spin" /> : props.title}
     </Button>

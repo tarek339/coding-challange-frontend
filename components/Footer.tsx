@@ -18,8 +18,8 @@ const FooterSection = ({
 
 const Footer = () => {
   return (
-    <footer className="flex max-md:flex-col items-start justify-between w-full py-5 px-5 border-t-2 border-primary">
-      <div className="flex max-md:flex-col gap-10 items-center justify-center">
+    <footer className="flex max-md:flex-col max-md:gap-10 max-md:text-center md:items-start justify-between  py-5 px-5 border-t-2 border-primary">
+      <div className="flex max-md:flex-col gap-10 items-center">
         <FooterSection
           first={[
             <span key="line1" className="text-sm">
@@ -94,7 +94,7 @@ const Footer = () => {
         />
       </div>
 
-      <section className="flex flex-col gap-5">
+      <section className="flex flex-col max-md:w-full gap-5 max-md:items-center">
         <span className="text-sm flex items-center text-primary">
           <IconBrandWhatsapp />
           &nbsp; +49 40 2286 9279 0
